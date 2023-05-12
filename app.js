@@ -58,7 +58,6 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }), (req, res) => {
-    console.log(email);
 });
 
 app.get('/google/callback', passport.authenticate('google', { failureRedirect: '/failed' }), function (req, res) {
